@@ -12,6 +12,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
 }
 
 .img-container {
@@ -50,12 +51,20 @@ button {
 	width: 80px;
 }
 
-.arrow:first-of-type {
+.left {
 	left: 100px;
 }
 
-.arrow:last-of-type {
+.right {
 	right: 100px;
+}
+
+.arrow:hover {
+	transform: scale(1.02);
+}
+
+.arrow:active {
+	transform: scale(0.98);
 }
 
 .progress {
