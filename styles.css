@@ -82,6 +82,13 @@ button {
 	width: 20px;
 	height: 20px;
 	border-radius: 10px;
+	border: 2px solid gray;
+}
+
+.progress > button:active {
+	transform: scale(0.95);
+}
+
+.progress > button:first-of-type {
 	background-color: gray;
-	border: 1px solid gray;
 }
