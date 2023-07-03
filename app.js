@@ -51,3 +51,17 @@ function changeProgress(value) {
 	clearProgressBar();
 	progressButtons[value].style.backgroundColor = "gray";
 }
+
+// set Timeout for switching image every 5 seconds
+
+const intervalImageSlider = window.setInterval(switchImage, 5000);
+
+function switchImage() {
+	if (cssTranslate <= -80) {
+		cssTranslate = 0;
+	} else {
+		cssTranslate -= 20;
+	}
+	imageContainer.style.transform = `translateX(${cssTranslate}%)`;
+	changeProgress(-cssTranslate / (100 / imageCount));
+}
